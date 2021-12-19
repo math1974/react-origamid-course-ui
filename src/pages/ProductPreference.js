@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { get } from 'lodash';
 import React, { useEffect, useState } from 'react';
-import Loading from './Loading'
+import Loading from '../components/Loading'
 
 const ProductPreference = () => {
 	const [product, setProduct] = useState(null);
