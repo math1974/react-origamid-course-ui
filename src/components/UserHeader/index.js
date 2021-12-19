@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate, Outlet } from 'react-router-dom'
 
 import UserContext from '../../context/UserContext'
 import './style.css';
@@ -25,6 +25,16 @@ function UserHeader() {
 					<button onClick={HandleClick}>go to home</button>
 				</li>
 			</ul>
+
+			<section>
+				<p>
+					that is where muy outlet is gonna be
+				</p>
+
+				<div>
+					<Outlet />
+				</div>
+			</section>
 		</div>
 	)
 }

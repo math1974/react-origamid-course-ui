@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import UserInfo from './pages/UserInfo';
+import UserDescription from './components/UserDescription';
+import UserSecurity from './components/UserSecurity';
 
 function App() {
 	return (
@@ -13,7 +15,12 @@ function App() {
 
 			<Routes>
 				<Route path="/" element={<Home/>}/>
-				<Route path="user/:id" element={<UserInfo/>}/>
+
+				<Route path="user/:id" element={<UserInfo/>}>
+					<Route path="/" element={<UserDescription />} />
+					<Route path="/security" element={<UserSecurity />} />
+				</Route>
+
 			</Routes>
 		</BrowserRouter>
 	);
